@@ -26,17 +26,18 @@ http.createServer(function (request, response) {
     response.write("Variables used: " + txt);
     response.write('<br/>');
 
-    //file system
-    // fs.readFile(
-    //     "dummy1.html",
-    //     function (err, data) {
-            // response.writeHead(
-            //     200,
-            //     {"Content-type":"text/html"}
-            // );
-            // response.write(data);
-            // return response.end();
-        // });
+    response.write('Host = '+q.host);
+    response.write('<br/>');
+    response.write('Path = '+q.pathname);
+    response.write('<br/>');
+    response.write('Search = '+q.search);
+    response.write('<br/>');
+    response.write('Query = '+q.query);
+    response.write('<br/>');
+    // response.write('Month Var = '+q.query.month);
+    // response.write('<br/>');
+    // response.write('Year Var = '+q.query.year);
+    // response.write('<br/>');
 
     response.end('****End response***');
 }).listen(8080);
